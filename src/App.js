@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import Form1 from "./registration_form/Form1";
+import Child from "./State_lifting/Child";
+
+export default function App() {
+  const parentdata = "This data is the parent data @ App js";
+
+  const OnChildData = (childData) => {
+    console.log(childData);
+    console.log("Data from child to parent ");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <Form1 />
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <div>
+        <Child
+          name={"Samrat"}
+          parentData={parentdata}
+          handleChild={OnChildData} //props use to get child data in parent
+        />
+      </div>
     </div>
   );
 }
-
-export default App;

@@ -1,0 +1,18 @@
+.main_div{
+    background-color: #f8df7b;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    left: auto;
+    top: auto;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+}
+
+.small_div{
+    margin: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
